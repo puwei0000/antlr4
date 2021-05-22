@@ -26,8 +26,8 @@ The Javadoc comments are hidden from the parser and are ignored at the moment.  
 Token names always start with a capital letter and so do lexer rules as defined by Java’s `Character.isUpperCase` method. Parser rule names always start with a lowercase letter (those that fail `Character.isUpperCase`). The initial character can be followed by uppercase and lowercase letters, digits, and underscores. Here are some sample names:
 
 ```
-ID, LPAREN, RIGHT_CURLY // token names/rules
-expr, simpleDeclarator, d2, header_file // rule names
+ID, LPAREN, RIGHT_CURLY // token names/lexer rules
+expr, simpleDeclarator, d2, header_file // parser rule names
 ```
 
 Like Java, ANTLR accepts Unicode characters in ANTLR names:
@@ -79,7 +79,7 @@ These more or less correspond to `isJavaIdentifierPart` and `isJavaIdentifierSta
 
 ## Literals
 
-ANTLR does not distinguish between character and string literals as most languages do. All literal strings one or more characters in length are enclosed in single quotes such as `’;’`, `’if’`, `’>=’`, and `’\’` (refers to the one-character string containing the single quote character). Literals never contain regular expressions.
+ANTLR does not distinguish between character and string literals as most languages do. All literal strings one or more characters in length are enclosed in single quotes such as `’;’`, `’if’`, `’>=’`, and `’\’’` (refers to the one-character string containing the single quote character). Literals never contain regular expressions.
 
 Literals can contain Unicode escape sequences of the form `’\uXXXX’` (for Unicode code points up to `’U+FFFF’`) or `’\u{XXXXXX}’` (for all Unicode code points), where `’XXXX’` is the hexadecimal Unicode code point value.
 
